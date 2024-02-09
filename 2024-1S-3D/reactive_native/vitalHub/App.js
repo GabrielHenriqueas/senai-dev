@@ -7,6 +7,7 @@ import { RecuperarSenha } from "./src/screens/RecuperarSenha/RecuperarSenha";
 import { VerificaEmail } from "./src/screens/VerificaEmail/VerificaEmail";
 import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
 import { CriarConta } from "./src/screens/CriarConta/CriarConta";
+import { Perfil } from "./src/screens/Perfil/Perfil";
 
 const Stack = createNativeStackNavigator();
 
@@ -57,6 +58,11 @@ export default function App() {
           name="CriarConta"
           component={CriarConta}
           options={{ title: "Criar Conta" }}
+        />
+        <Stack.Screen
+          name="Perfil"
+          component={Perfil}
+          options={{ title: "Perfil" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

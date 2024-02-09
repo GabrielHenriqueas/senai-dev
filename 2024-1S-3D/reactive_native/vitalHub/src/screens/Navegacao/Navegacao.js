@@ -23,6 +23,10 @@ export const Navegacao = ({ navigation }) => {
                 title="Criar Conta"
                 onPress={() => navigation.navigate("CriarConta")}
             />
+            <Button
+                title="Perfil"
+                onPress={() => navigation.navigate("Perfil")}
+            />
         </View>
     )
 }

@@ -16,6 +16,21 @@ export const Input = styled.TextInput.attrs({
     color: #34898f;
 `
 
+export const PerfilInput = styled.TextInput.attrs({
+    placeholderTextColor: "#33303E"
+})`
+    width: 90%;
+    height: 53px;
+    padding: 16px;
+    margin-top: 15px;
+
+    border-radius: 5px;
+
+    font-size: 16px;
+    font-family: "Quicksand_600SemiBold";
+    background-color: #F5F3F3;
+`
+
 export const InputVerifica = styled(Input)`
     width: 65px;
     height: 62px;
@@ -27,4 +42,11 @@ export const InputVerifica = styled(Input)`
     font-size: 40px;
     font-family: "Quicksand_600SemiBold";
     text-align: center;
+`
+
+export const BoxInput = styled.SafeAreaView`
+    width: 90%;
+
+    flex-direction: row;
+
 `
