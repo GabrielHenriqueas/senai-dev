@@ -8,6 +8,7 @@ import { VerificaEmail } from "./src/screens/VerificaEmail/VerificaEmail";
 import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
 import { CriarConta } from "./src/screens/CriarConta/CriarConta";
 import { Perfil } from "./src/screens/Perfil/Perfil";
+import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
 
 const Stack = createNativeStackNavigator();
 
@@ -63,6 +64,11 @@ export default function App() {
           name="Perfil"
           component={Perfil}
           options={{ title: "Perfil" }}
+        />
+        <Stack.Screen
+          name="ConsultasMedico"
+          component={ConsultasMedico}
+          options={{ title: "ConsultasMedico" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

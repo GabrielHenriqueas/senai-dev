@@ -31,6 +31,10 @@ export const PerfilInput = styled.TextInput.attrs({
     background-color: #F5F3F3;
 `
 
+export const CepCidadeInput = styled(PerfilInput)`
+    width: 45%;
+`
+    
 export const InputVerifica = styled(Input)`
     width: 65px;
     height: 62px;
@@ -46,7 +50,6 @@ export const InputVerifica = styled(Input)`
 
 export const BoxInput = styled.SafeAreaView`
     width: 90%;
-
     flex-direction: row;
-
+    justify-content: space-between;
 `

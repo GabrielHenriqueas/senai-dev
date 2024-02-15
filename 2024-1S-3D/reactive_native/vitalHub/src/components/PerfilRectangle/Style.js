@@ -11,6 +11,6 @@ export const PerfilRectangle = styled.View`
     bottom: 50px;
     background-color: #FFFFFF;
     border-radius: 5px;
-    elevation: 15px;
+    /* elevation: 15px; */
     margin-bottom: 30px;
 `

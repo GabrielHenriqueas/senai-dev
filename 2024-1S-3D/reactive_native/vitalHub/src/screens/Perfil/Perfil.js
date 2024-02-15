@@ -1,10 +1,10 @@
-import { Button, ButtonTitle } from "../../components/Button/Button"
+import { Button, ButtonGray, ButtonTitle } from "../../components/Button/Button"
 import { Container, ContainerImage, ContainerScroll } from "../../components/Container/Style"
 import { ContentAccount } from "../../components/ContentAccount/ContentAccount"
-import { BoxInput, Input, PerfilInput } from "../../components/Input/Input"
+import { BoxInput, CepCidadeInput, CepInput, Input, PerfilInput } from "../../components/Input/Input"
 import { PerfilImage } from "../../components/PerfilImage/Style"
 import { PerfilRectangle } from "../../components/PerfilRectangle/Style"
-import { LabelPerfil, LinkEmail, NameText, Title } from "../../components/Title/Styled"
+import { LabelCidadeCep, LabelPerfil, LinkEmail, NameText, Title } from "../../components/Title/Styled"
 
 export const Perfil = ({ Perfil }) => {
     return (
@@ -38,22 +38,30 @@ export const Perfil = ({ Perfil }) => {
                 />
 
                 <BoxInput>
-                    <LabelPerfil>Endereço</LabelPerfil>
-                    <LabelPerfil>Endereço</LabelPerfil>
+                    <LabelCidadeCep>CEP</LabelCidadeCep>
+                    <LabelCidadeCep>Cidade</LabelCidadeCep>
                 </BoxInput>
 
                 <BoxInput>
-                    <PerfilInput
-                        placeholder={"Ex: Rua Vicenso Silva, 987"}
+                    <CepCidadeInput
+                        placeholder={"06548-909"}
                     />
-                    <PerfilInput
-                        placeholder={"Ex: Rua Vicenso Silva, 987"}
+                    <CepCidadeInput
+                        placeholder={"Moema-SP"}
                     />
                 </BoxInput>
 
                 <Button>
                     <ButtonTitle>Salvar</ButtonTitle>
                 </Button>
+
+                <Button>
+                    <ButtonTitle>Editar</ButtonTitle>
+                </Button>
+
+                <ButtonGray>
+                    <ButtonTitle>Sair do App</ButtonTitle>
+                </ButtonGray>
 
 
 

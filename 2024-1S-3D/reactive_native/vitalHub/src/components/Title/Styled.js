@@ -38,3 +38,7 @@ export const LabelPerfil = styled.Text`
     color: black;
     margin-top: 24px;
 `
+
+export const LabelCidadeCep = styled(LabelPerfil)`
+    width: 45%;
+`
