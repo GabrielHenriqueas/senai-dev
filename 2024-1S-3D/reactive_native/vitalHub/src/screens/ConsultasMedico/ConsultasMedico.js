@@ -1,25 +1,15 @@
-import { Container, ContainerHeader } from "../../components/Container/Style"
+import CalendarList from "../../components/Calendar/CalendarHome";
+import { Container } from "../../components/Container/Style";
+import { Header } from "../../components/Header/Header";
+
 
 export const ConsultasMedico = ({ ConsultasMedico }) => {
     return (
         <Container>
-            <ContainerHeader>
+             <Header/>
 
-
-                {/* <BoxUser>
-
-                    <ImageUser />
-
-                    <DataUser>
-                        <TextDefault>Bem vindo</TextDefault>
-                        <NomeUser>Dr. Claudio</NomeUser>
-                    </DataUser>
-
-                </BoxUser>
-
-                <MaterialIcons /> */}
-            </ContainerHeader>
+            <CalendarList/>
+            
         </Container>
     )
-
 }

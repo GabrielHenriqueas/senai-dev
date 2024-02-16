@@ -29,7 +29,10 @@ export default function App() {
     //options(title): título da tela
 
     <NavigationContainer>
-      <Stack.Navigator>
+
+      <Stack.Navigator screenOptions={{
+        headerShown:false
+      }}>
         <Stack.Screen
           name="Navegacao"
           component={Navegacao}
