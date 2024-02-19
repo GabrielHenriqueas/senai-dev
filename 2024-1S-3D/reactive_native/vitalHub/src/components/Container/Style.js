@@ -59,7 +59,7 @@ export const ImageUser = styled.Image`
 `
 
 export const DataUser = styled.View`
-
+    
     
 `
 
@@ -75,4 +75,11 @@ export const NameUser = styled.Text`
     margin-top: 2px;
     font-family: "MontserratAlternates_600SemiBold";
     
+`
+
+export const FilterAppointment = styled.View`
+    	width: 90%; 
+    	margin: 38px;
+        flex-direction: row;
+        justify-content: space-between;
 `
