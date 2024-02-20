@@ -2,7 +2,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { Navegacao } from "./src/screens/Navegacao/Navegacao";
 import { Login } from "./src/screens/Login/Login";
-import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold } from "@expo-google-fonts/dev";
+import { useFonts, MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold, Quicksand_400Regular } from "@expo-google-fonts/dev";
 import { RecuperarSenha } from "./src/screens/RecuperarSenha/RecuperarSenha";
 import { VerificaEmail } from "./src/screens/VerificaEmail/VerificaEmail";
 import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
@@ -14,7 +14,13 @@ const Stack = createNativeStackNavigator();
 
 export default function App() {
 
-  const [fontsLoaded, fontsError] = useFonts({ MontserratAlternates_600SemiBold, MontserratAlternates_500Medium, Quicksand_500Medium, Quicksand_600SemiBold })
+  const [fontsLoaded, fontsError] = useFonts({ 
+    MontserratAlternates_600SemiBold, 
+    MontserratAlternates_500Medium, 
+    Quicksand_500Medium, 
+    Quicksand_600SemiBold,
+    Quicksand_400Regular,
+  })
 
   if (!fontsLoaded && !fontsError) {
     return null;

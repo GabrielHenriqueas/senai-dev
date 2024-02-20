@@ -5,7 +5,16 @@ import { Header } from "../../components/Header/Header";
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
 import { ContentAccount } from "../../components/ContentAccount/ContentAccount";
 import { PacientCard } from "../../components/PacientCard/PatientCard";
+import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
+import { ListComponent } from "../../components/List/List";
 
+const Consultas = [
+    {id: 1, nome: "Carlos", situacao: "pendente"},
+    {id: 2, nome: "Carlos", situacao: "realizado"},
+    {id: 3, nome: "Carlos", situacao: "cancelado"},
+    {id: 4, nome: "Carlos", situacao: "realizado"},
+    {id: 5, nome: "Carlos", situacao: "cancelado"},
+];
 
 export const ConsultasMedico = () => {
     const [statusLista, setStatusLista] = useState("pendente")
@@ -42,10 +51,28 @@ export const ConsultasMedico = () => {
                     onPress={() => setStatusLista("canceladas")} />
             </FilterAppointment>
 
-            <ContentAccount>
-            <PacientCard/>
+            {/* Seção de Cards */}
 
-            </ContentAccount>
+            {/* Card */}
+            <AppointmentCard/>
+
+            {/* Lista */}
+            <ListComponent
+                data={Consultas}
+                keyExtractor={(item) => item.id}
+
+                renderItem={({item}) => 
+            statusLista == item.situacao && (
+                <AppointmentCard
+                    situacao={item.situacao}
+                />
+            )}
+            />
+
+
+
+
+           
 
 
         </Container>
