@@ -7,17 +7,25 @@ import { ContentAccount } from "../../components/ContentAccount/ContentAccount";
 import { PacientCard } from "../../components/PacientCard/PatientCard";
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
 import { ListComponent } from "../../components/List/List";
+import { Modal } from "react-native";
+import { CancellationModal } from "../../components/CancellationModal/CancellationModal";
 
 const Consultas = [
     {id: 1, nome: "Carlos", situacao: "pendente"},
-    {id: 2, nome: "Carlos", situacao: "realizado"},
+    {id: 2, nome: "Carlos", situacao: "pendente"},
     {id: 3, nome: "Carlos", situacao: "cancelado"},
     {id: 4, nome: "Carlos", situacao: "realizado"},
     {id: 5, nome: "Carlos", situacao: "cancelado"},
 ];
 
 export const ConsultasMedico = () => {
+    
+    //state para o estado da lista(Cards)
     const [statusLista, setStatusLista] = useState("pendente")
+
+    // state para a exibição dos modais
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalAppointment, setShowModalAppointment] = useState(false);
 
     return (
         <Container>
@@ -54,7 +62,6 @@ export const ConsultasMedico = () => {
             {/* Seção de Cards */}
 
             {/* Card */}
-            <AppointmentCard/>
 
             {/* Lista */}
             <ListComponent
@@ -65,16 +72,18 @@ export const ConsultasMedico = () => {
             statusLista == item.situacao && (
                 <AppointmentCard
                     situacao={item.situacao}
+                    onPressCancel={() => setShowModalCancel(true)}
+                    onPressAppointment={() => setShowModalAppointment(true)}
                 />
             )}
+                showsVerticalScrollIndicator={false}
             />
 
-
-
-
-           
-
-
+            {/* modal cancelar */}
+            <CancellationModal
+                visible={showModalCancel}
+                setShowModalCancel={setShowModalCancel}
+            />       
         </Container>
     )
 }

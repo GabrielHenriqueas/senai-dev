@@ -17,7 +17,7 @@ export const AppointmentCard = ({
             <ContentCard>
 
                 <DataProfileCard>
-                    <ProfileName>Beija Homens</ProfileName>
+                    <ProfileName>Tinas</ProfileName>
 
                     <ProfileData>
                         <TextAge>18 Anos</TextAge>
@@ -40,7 +40,7 @@ export const AppointmentCard = ({
                             </>
                         ) : situacao == "pendente" ?
                             (
-                                <ButtonCard>
+                                <ButtonCard onPress={onPressCancel}>
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
                             ) : (

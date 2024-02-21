@@ -8,6 +8,8 @@ export const ContainerCardList = styled.View`
     padding: 10px;
     border-radius: 5px;
     background-color: #fff;
+    align-items: center;
+    justify-content: center;
     
     flex-direction: row;
     gap: 10px;

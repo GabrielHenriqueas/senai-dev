@@ -11,7 +11,7 @@ export const Header = ({ Header }) => {
                 />
                 <DataUser>
                     <TextDefault>Bem Vindo !</TextDefault>
-                    <NameUser>Dr. Fulano</NameUser>
+                    <NameUser>Dr. Kallan</NameUser>
                 </DataUser>
             </BoxUser>
 
