@@ -4,6 +4,7 @@ import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, Data
 export const AppointmentCard = ({
     situacao = "pendente",
     onPressCancel,
+    onPressVerProntuario,
     onPressAppointment,
 }) => {
     return (
@@ -44,7 +45,7 @@ export const AppointmentCard = ({
                                     <ButtonText situacao={situacao}>Cancelar</ButtonText>
                                 </ButtonCard>
                             ) : (
-                                <ButtonCard>
+                                <ButtonCard onPress={onPressVerProntuario}>
                                     <ButtonText situacao={situacao}>Ver prontuário</ButtonText>
                                 </ButtonCard>
                             )

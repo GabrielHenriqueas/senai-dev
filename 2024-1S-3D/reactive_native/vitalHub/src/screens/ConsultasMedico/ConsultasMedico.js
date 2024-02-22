@@ -9,12 +9,16 @@ import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCar
 import { ListComponent } from "../../components/List/List";
 import { Modal } from "react-native";
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal";
+import { ConsultModal } from "../../components/ConsultaModal/StyledConsultModal";
 
 const Consultas = [
     {id: 1, nome: "Carlos", situacao: "pendente"},
     {id: 2, nome: "Carlos", situacao: "pendente"},
     {id: 3, nome: "Carlos", situacao: "cancelado"},
     {id: 4, nome: "Carlos", situacao: "realizado"},
+    {id: 5, nome: "Carlos", situacao: "cancelado"},
+    {id: 5, nome: "Carlos", situacao: "cancelado"},
+    {id: 5, nome: "Carlos", situacao: "cancelado"},
     {id: 5, nome: "Carlos", situacao: "cancelado"},
 ];
 
@@ -25,6 +29,7 @@ export const ConsultasMedico = () => {
 
     // state para a exibição dos modais
     const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalConsult, setShowModalConsult] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
 
     return (
@@ -49,20 +54,20 @@ export const ConsultasMedico = () => {
                 {/* botao p consultas realizadas */}
                 <BtnListAppointment
                     textButton={"Realizadas"}
-                    clickButton={statusLista === "realizadas"}
-                    onPress={() => setStatusLista("realizadas")} />
+                    clickButton={statusLista === "realizado"}
+                    onPress={() => setStatusLista("realizado")} />
 
                 {/* botao p consultas canceladas */}
                 <BtnListAppointment
                     textButton={"Canceladas"}
-                    clickButton={statusLista === "canceladas"}
-                    onPress={() => setStatusLista("canceladas")} />
+                    clickButton={statusLista === "cancelado"}
+                    onPress={() => setStatusLista("cancelado")} />
             </FilterAppointment>
 
             {/* Seção de Cards */}
 
             {/* Card */}
-
+        
             {/* Lista */}
             <ListComponent
                 data={Consultas}
@@ -74,15 +79,23 @@ export const ConsultasMedico = () => {
                     situacao={item.situacao}
                     onPressCancel={() => setShowModalCancel(true)}
                     onPressAppointment={() => setShowModalAppointment(true)}
+                    onPressVerProntuario={() => setShowModalConsult(true)}
                 />
             )}
                 showsVerticalScrollIndicator={false}
             />
+            
+        
 
             {/* modal cancelar */}
             <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
+            />
+
+            <ConsultModal
+                visible={showModalConsult}
+                setShowModalConsult={setShowModalConsult}
             />       
         </Container>
     )

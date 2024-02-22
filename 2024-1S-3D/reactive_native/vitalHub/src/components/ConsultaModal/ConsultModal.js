@@ -1,8 +1,11 @@
 import { Modal } from "react-native"
-import { ModalContent } from "../CancellationModal/Style"
+import { ModalContent, ModalText } from "../CancellationModal/Style"
 import { Title } from "../Title/Styled"
+import { Button } from "../Button/Button"
+import { ConsultModal } from "../ConsultaModal/StyledConsultModal"
+import { ContentAccount, LinkBold } from "../ContentAccount/ContentAccount"
 
-export const ConsultaModal = ({
+export const ConsultModal = ({
     visible,
     setShowModalConsulta,
     ...rest }) => {
@@ -11,7 +14,7 @@ export const ConsultaModal = ({
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
 
             {/* Container */}
-            <ConsultaModal>
+            <ConsultModal>
                 {/* content */}
                 <ModalContent>
 
@@ -30,12 +33,12 @@ export const ConsultaModal = ({
 
                     {/* button cancel */}
                     <ContentAccount>
-                        <LinkBold onPress={() => setShowModalCancel(false)}>Cancelar</LinkBold>
+                        <LinkBold onPress={() => setShowModalConsult(false)}>Cancelar</LinkBold>
                     </ContentAccount>
 
 
                 </ModalContent>
-            </ConsultaModal>
+            </ConsultModal>
         </Modal>
     )
 }
