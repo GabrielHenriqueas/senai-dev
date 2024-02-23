@@ -9,6 +9,8 @@ import { RedefinirSenha } from "./src/screens/RedefinirSenha/RedefinirSenha";
 import { CriarConta } from "./src/screens/CriarConta/CriarConta";
 import { Perfil } from "./src/screens/Perfil/Perfil";
 import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
+import { Prontuario } from "./src/screens/Prontuario/Prontuario";
+import { ProntuarioEdit } from "./src/screens/ProntuarioEdit/ProntuarioEdit";
 
 const Stack = createNativeStackNavigator();
 
@@ -78,6 +80,16 @@ export default function App() {
           name="ConsultasMedico"
           component={ConsultasMedico}
           options={{ title: "ConsultasMedico" }}
+        />
+        <Stack.Screen
+          name="Prontuario"
+          component={Prontuario}
+          options={{ title: "Prontuario" }}
+        />
+        <Stack.Screen
+          name="ProntuarioEdit"
+          component={ProntuarioEdit}
+          options={{ title: "ProntuarioEdit" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

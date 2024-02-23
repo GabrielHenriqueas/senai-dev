@@ -78,8 +78,8 @@ export const ConsultasMedico = () => {
                 <AppointmentCard
                     situacao={item.situacao}
                     onPressCancel={() => setShowModalCancel(true)}
-                    onPressAppointment={() => setShowModalAppointment(true)}
                     onPressVerProntuario={() => setShowModalConsult(true)}
+                    onPressAppointment={() => setShowModalAppointment(true)}
                 />
             )}
                 showsVerticalScrollIndicator={false}

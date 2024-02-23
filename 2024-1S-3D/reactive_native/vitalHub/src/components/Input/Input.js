@@ -15,6 +15,9 @@ export const Input = styled.TextInput.attrs({
     font-family: "MontserratAlternates_600SemiBold";
     color: #34898f;
 `
+export const InputProntuario = styled(Input)`
+    height: 120px;
+`
 
 export const PerfilInput = styled.TextInput.attrs({
     placeholderTextColor: "#33303E"
