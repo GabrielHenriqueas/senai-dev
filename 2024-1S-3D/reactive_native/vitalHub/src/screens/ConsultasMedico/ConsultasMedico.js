@@ -9,7 +9,8 @@ import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCar
 import { ListComponent } from "../../components/List/List";
 import { Modal } from "react-native";
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal";
-import { ConsultModal } from "../../components/ConsultaModal/StyledConsultModal";
+import { ConsultModal } from "../../components/ConsultaModal/ConsultModal";
+
 
 const Consultas = [
     {id: 1, nome: "Carlos", situacao: "pendente"},

@@ -18,7 +18,6 @@ export const Input = styled.TextInput.attrs({
 export const InputProntuario = styled(Input)`
     height: 120px;
 `
-
 export const PerfilInput = styled.TextInput.attrs({
     placeholderTextColor: "#33303E"
 })`
@@ -33,11 +32,13 @@ export const PerfilInput = styled.TextInput.attrs({
     font-family: "Quicksand_600SemiBold";
     background-color: #F5F3F3;
 `
-
+export const InputProntuarioEdit = styled(PerfilInput)`
+    height: 121px;
+    
+`
 export const CepCidadeInput = styled(PerfilInput)`
     width: 45%;
 `
-    
 export const InputVerifica = styled(Input)`
     width: 65px;
     height: 62px;
@@ -50,7 +51,6 @@ export const InputVerifica = styled(Input)`
     font-family: "Quicksand_600SemiBold";
     text-align: center;
 `
-
 export const BoxInput = styled.SafeAreaView`
     width: 90%;
     flex-direction: row;

@@ -20,7 +20,7 @@ export const Prontuario = ({ Prontuario }) => {
                     </PerfilRectangle>
                 </ContainerImage>
 
-                <LabelPerfil>Descrição da Consulota</LabelPerfil>
+                <LabelPerfil>Descrição da Consulta</LabelPerfil>
                 <InputProntuario
                     placeholder={"Descrição"}
                 />

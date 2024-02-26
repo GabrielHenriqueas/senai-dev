@@ -1,34 +1,34 @@
 import { Modal } from "react-native"
 import { ModalContent, ModalText } from "../CancellationModal/Style"
-import { Title } from "../Title/Styled"
-import { Button } from "../Button/Button"
-import { ConsultModal } from "../ConsultaModal/StyledConsultModal"
+import { LinkEmail, NameText, Title } from "../Title/Styled"
+import { Button, ButtonTitle } from "../Button/Button"
+import { ConsultModalStyled } from "../ConsultaModal/StyledConsultModal"
 import { ContentAccount, LinkBold } from "../ContentAccount/ContentAccount"
+import { ModalImage, PerfilImage } from "../PerfilImage/Style"
 
 export const ConsultModal = ({
     visible,
-    setShowModalConsulta,
+    setShowModalConsult,
     ...rest }) => {
     return (
         // 
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
 
             {/* Container */}
-            <ConsultModal>
+            <ConsultModalStyled>
                 {/* content */}
                 <ModalContent>
 
-                    {/* Title */}
-                    <Title>Cancelar Consulta</Title>
+                    <ModalImage source={{ uri: "https://github.com/ThiagoRafael-lin.png" }} />
 
-                    {/* description */}
-                    <ModalText>
-                        Ao cancelar essa consulta, abrirá uma possível disponibilidade no seu horário, deseja mesmo cancelar essa consulta?
-                    </ModalText>
+                    {/* Title */}
+                    <Title>Niccole Sarga</Title>
+
+                    <LinkEmail>22 anos niccole.sarga@gmail.com</LinkEmail>
 
                     {/* button modal*/}
                     <Button>
-                        <ButtonTitle>Confirmar</ButtonTitle>
+                        <ButtonTitle>Inserir Prontuário</ButtonTitle>
                     </Button>
 
                     {/* button cancel */}
@@ -36,9 +36,8 @@ export const ConsultModal = ({
                         <LinkBold onPress={() => setShowModalConsult(false)}>Cancelar</LinkBold>
                     </ContentAccount>
 
-
                 </ModalContent>
-            </ConsultModal>
+            </ConsultModalStyled>
         </Modal>
     )
 }
