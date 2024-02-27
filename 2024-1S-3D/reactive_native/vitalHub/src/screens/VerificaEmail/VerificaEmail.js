@@ -1,11 +1,11 @@
 import styled from "styled-components";
-import { Container } from "../../components/Container/Style";
-import { Logo } from "../../components/Logo/Styled";
-import { SubTitle, Title } from "../../components/Title/Styled";
-import { LinkMedium } from "../../components/Link/Style";
-import { ContentAccount, ContentNumber, LinkBold } from "../../components/ContentAccount/ContentAccount";
-import { InputVerifica } from "../../components/Input/Input";
-import { Button, ButtonTitle } from "../../components/Button/Button";
+import { Container } from "../../components/Container/StyledContainer";
+import { Logo } from "../../components/Logo/StyledLogo";
+import { SubTitle, Title } from "../../components/Title/StyledTitle";
+//import { LinkMedium } from "../../components/Link/StyledLink";
+import { ContentAccount, ContentNumber, LinkBold } from "../../components/ContentAccount/StyledContentAccount";
+import { InputVerifica } from "../../components/Input/StyledInput";
+import { Button, ButtonTitle } from "../../components/Button/StyledButton";
 
 export const VerificaEmail = ({ VerificaEmail }) => {
     return (

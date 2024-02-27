@@ -1,10 +1,10 @@
-import { Button, ButtonTitle } from "../../components/Button/Button"
-import { Container } from "../../components/Container/Style"
-import { LinkBold } from "../../components/ContentAccount/ContentAccount"
-import { Input } from "../../components/Input/Input"
-import { LinkMedium } from "../../components/Link/Style"
-import { Logo } from "../../components/Logo/Styled"
-import { SubTitle, Title } from "../../components/Title/Styled"
+import { Button, ButtonTitle } from "../../components/Button/StyledButton"
+import { Container } from "../../components/Container/StyledContainer"
+import { LinkBold } from "../../components/ContentAccount/StyledContentAccount"
+import { Input } from "../../components/Input/StyledInput"
+import { LinkMedium } from "../../components/Link/StyledLink"
+import { Logo } from "../../components/Logo/StyledLogo"
+import { SubTitle, Title } from "../../components/Title/StyledTitle"
 
 export const CriarConta = ({ CriarConta }) => {
     return (

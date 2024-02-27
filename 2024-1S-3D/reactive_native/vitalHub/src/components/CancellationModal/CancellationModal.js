@@ -1,8 +1,8 @@
 import { Modal } from "react-native"
-import { Title } from "../Title/Styled"
-import { ModalContent, ModalText, PatientModal } from "./Style"
-import { Button, ButtonTitle } from "../Button/Button"
-import { ContentAccount, LinkBold } from "../ContentAccount/ContentAccount"
+import { Title } from "../Title/StyledTitle"
+import { ModalContent, ModalText, PatientModal } from "./StyledCancellationModal"
+import { Button, ButtonTitle } from "../Button/StyledButton"
+import { ContentAccount, LinkBold } from "../ContentAccount/StyledContentAccount"
 
 export const CancellationModal = ({
     visible,

@@ -1,4 +1,4 @@
-import { ButtonTabsStyle, ButtonTextStyle } from "./Style"
+import { ButtonTabsStyle, ButtonTextStyle } from "./StyledBtnListAppointment"
 
 export const BtnListAppointment = ({
     textButton,

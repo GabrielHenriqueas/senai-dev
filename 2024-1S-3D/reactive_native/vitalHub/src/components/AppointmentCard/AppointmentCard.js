@@ -1,5 +1,5 @@
 import { AntDesign } from '@expo/vector-icons';
-import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './Style';
+import { ButtonCard, ButtonText, ClockCard, ContainerCardList, ContentCard, DataProfileCard, ProfileData, ProfileImage, ProfileName, TextAge, TextBold, ViewRow } from './StyledAppointmentCard';
 
 export const AppointmentCard = ({
     situacao = "pendente",

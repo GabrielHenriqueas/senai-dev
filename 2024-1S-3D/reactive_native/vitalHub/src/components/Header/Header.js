@@ -1,4 +1,4 @@
-import { BoxUser, ContainerHeader, DataUser, ImageUser, NameUser, TextDefault } from "../Container/Style"
+import { BoxUser, ContainerHeader, DataUser, ImageUser, NameUser, TextDefault } from "../Container/StyledContainer"
 import { Ionicons } from '@expo/vector-icons';
 
 

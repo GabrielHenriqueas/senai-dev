@@ -1,10 +1,11 @@
-import { Button, ButtonGoogle, ButtonTitle, ButtonTitleGoogle } from "../../components/Button/Button"
-import { Container } from "../../components/Container/Style"
-import { ContentAccount, LinkBold, TextAccount } from "../../components/ContentAccount/ContentAccount"
-import { Input } from "../../components/Input/Input"
-import { LinkMedium } from "../../components/Link/Style"
-import { Logo } from "../../components/Logo/Styled"
-import { Title } from "../../components/Title/Styled"
+import { DefaultButton, GoogleButton } from "../../components/Button/Button"
+import { Button, ButtonGoogle, ButtonTitle, ButtonTitleGoogle } from "../../components/Button/StyledButton"
+import { Container } from "../../components/Container/StyledContainer"
+import { ContentAccount, LinkBold, TextAccount } from "../../components/ContentAccount/StyledContentAccount"
+import { Input } from "../../components/Input/StyledInput"
+import { LinkMedium } from "../../components/Link/StyledLink"
+import { Logo } from "../../components/Logo/StyledLogo"
+import { Title } from "../../components/Title/StyledTitle"
 import { AntDesign } from '@expo/vector-icons';
 
 export const Login = ({ Login }) => {
@@ -25,14 +26,10 @@ export const Login = ({ Login }) => {
 
             <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
-            <Button>
-                <ButtonTitle>Entrar</ButtonTitle>
-            </Button>
+            <DefaultButton text={"Entrar"} />
 
-            <ButtonGoogle>
-                <AntDesign name="google" size={18} color="#496BBA" />
-                <ButtonTitleGoogle>Entrar com o Google</ButtonTitleGoogle>
-            </ButtonGoogle>
+            <GoogleButton text={"Entrar com o Google"} />
+
 
             <ContentAccount>
                 <TextAccount>Não tem conta?</TextAccount><LinkBold> Crie uma agora!</LinkBold>

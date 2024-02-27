@@ -1,8 +1,8 @@
-import { Button, ButtonTitle } from "../../components/Button/Button"
-import { Container } from "../../components/Container/Style"
-import { Input } from "../../components/Input/Input"
-import { Logo } from "../../components/Logo/Styled"
-import { SubTitle, Title } from "../../components/Title/Styled"
+import { Button, ButtonTitle } from "../../components/Button/StyledButton"
+import { Container } from "../../components/Container/StyledContainer"
+import { Input } from "../../components/Input/StyledInput"
+import { Logo } from "../../components/Logo/StyledLogo"
+import { SubTitle, Title } from "../../components/Title/StyledTitle"
 
 export const RedefinirSenha = ({ RedefinirSenha }) => {
     return (

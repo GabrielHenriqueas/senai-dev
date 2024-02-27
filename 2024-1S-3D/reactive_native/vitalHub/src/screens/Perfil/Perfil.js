@@ -1,10 +1,10 @@
-import { Button, ButtonGray, ButtonTitle } from "../../components/Button/Button"
-import { Container, ContainerImage, ContainerScroll } from "../../components/Container/Style"
-import { ContentAccount } from "../../components/ContentAccount/ContentAccount"
-import { BoxInput, CepCidadeInput, CepInput, Input, PerfilInput } from "../../components/Input/Input"
-import { PerfilImage } from "../../components/PerfilImage/Style"
-import { PerfilRectangle } from "../../components/PerfilRectangle/Style"
-import { LabelCidadeCep, LabelPerfil, LinkEmail, NameText, Title } from "../../components/Title/Styled"
+import { Button, ButtonGray, ButtonTitle } from "../../components/Button/StyledButton"
+import { Container, ContainerImage, ContainerScroll } from "../../components/Container/StyledContainer"
+import { ContentAccount } from "../../components/ContentAccount/StyledContentAccount"
+import { BoxInput, CepCidadeInput, CepInput, Input, PerfilInput } from "../../components/Input/StyledInput"
+import { PerfilImage } from "../../components/PerfilImage/StyledPacientCard"
+import { PerfilRectangle } from "../../components/PerfilRectangle/StyledPerfilRectangle"
+import { LabelCidadeCep, LabelPerfil, LinkEmail, NameText, Title } from "../../components/Title/StyledTitle"
 
 export const Perfil = ({ Perfil }) => {
     return (

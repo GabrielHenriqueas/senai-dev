@@ -1,10 +1,10 @@
-import { Button, ButtonTitle } from "../../components/Button/Button"
-import { Container, ContainerImage, ContainerScroll } from "../../components/Container/Style"
-import { LinkBold } from "../../components/ContentAccount/ContentAccount"
-import { Input, InputProntuario, InputProntuarioEdit, PerfilInput } from "../../components/Input/Input"
-import { PerfilImage } from "../../components/PerfilImage/Style"
-import { PerfilRectangle } from "../../components/PerfilRectangle/Style"
-import { LabelPerfil, LinkEmail, NameText } from "../../components/Title/Styled"
+import { Button, ButtonTitle } from "../../components/Button/StyledButton"
+import { Container, ContainerImage, ContainerScroll } from "../../components/Container/StyledContainer"
+import { LinkBold } from "../../components/ContentAccount/StyledContentAccount"
+import { Input, InputProntuario, InputProntuarioEdit, PerfilInput } from "../../components/Input/StyledInput"
+import { PerfilImage } from "../../components/PerfilImage/StyledPacientCard"
+import { PerfilRectangle } from "../../components/PerfilRectangle/StyledPerfilRectangle"
+import { LabelPerfil, LinkEmail, NameText } from "../../components/Title/StyledTitle"
 
 export const ProntuarioEdit = ({ ProntuarioEdit }) => {
     return (

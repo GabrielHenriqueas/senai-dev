@@ -1,10 +1,10 @@
 import { Modal } from "react-native"
-import { ModalContent, ModalText } from "../CancellationModal/Style"
-import { LinkEmail, NameText, Title } from "../Title/Styled"
-import { Button, ButtonTitle } from "../Button/Button"
-import { ConsultModalStyled } from "../ConsultaModal/StyledConsultModal"
-import { ContentAccount, LinkBold } from "../ContentAccount/ContentAccount"
-import { ModalImage, PerfilImage } from "../PerfilImage/Style"
+import { ModalContent } from "../CancellationModal/StyledCancellationModal"
+import { LinkEmail, Title } from "../Title/StyledTitle"
+import { Button, ButtonTitle } from "../Button/StyledButton"
+import { ConsultModalStyled } from "./StyledConsultModal"
+import { ContentAccount, LinkBold } from "../ContentAccount/StyledContentAccount"
+import { ModalImage } from "../PerfilImage/StyledPacientCard"
 
 export const ConsultModal = ({
     visible,

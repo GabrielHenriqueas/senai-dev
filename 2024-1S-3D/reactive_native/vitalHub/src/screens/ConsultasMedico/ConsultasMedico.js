@@ -1,30 +1,27 @@
 import { useState } from "react";
-import CalendarList from "../../components/Calendar/CalendarHome";
-import { Container, FilterAppointment } from "../../components/Container/Style";
+import { CalendarList } from "../../components/Calendar/CalendarHome";
+import { Container, FilterAppointment } from "../../components/Container/StyledContainer";
 import { Header } from "../../components/Header/Header";
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
-import { ContentAccount } from "../../components/ContentAccount/ContentAccount";
-import { PacientCard } from "../../components/PacientCard/PatientCard";
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
-import { ListComponent } from "../../components/List/List";
-import { Modal } from "react-native";
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal";
-import { ConsultModal } from "../../components/ConsultaModal/ConsultModal";
+import { ConsultModal } from "../../components/ConsultModal/ConsultModal";
+import { FlatListComponent } from "react-native";
 
 
 const Consultas = [
-    {id: 1, nome: "Carlos", situacao: "pendente"},
-    {id: 2, nome: "Carlos", situacao: "pendente"},
-    {id: 3, nome: "Carlos", situacao: "cancelado"},
-    {id: 4, nome: "Carlos", situacao: "realizado"},
-    {id: 5, nome: "Carlos", situacao: "cancelado"},
-    {id: 5, nome: "Carlos", situacao: "cancelado"},
-    {id: 5, nome: "Carlos", situacao: "cancelado"},
-    {id: 5, nome: "Carlos", situacao: "cancelado"},
+    { id: 1, nome: "Carlos", situacao: "pendente" },
+    { id: 2, nome: "Carlos", situacao: "pendente" },
+    { id: 3, nome: "Carlos", situacao: "cancelado" },
+    { id: 4, nome: "Carlos", situacao: "realizado" },
+    { id: 5, nome: "Carlos", situacao: "cancelado" },
+    { id: 5, nome: "Carlos", situacao: "cancelado" },
+    { id: 5, nome: "Carlos", situacao: "cancelado" },
+    { id: 5, nome: "Carlos", situacao: "cancelado" },
 ];
 
 export const ConsultasMedico = () => {
-    
+
     //state para o estado da lista(Cards)
     const [statusLista, setStatusLista] = useState("pendente")
 
@@ -68,25 +65,25 @@ export const ConsultasMedico = () => {
             {/* Seção de Cards */}
 
             {/* Card */}
-        
+
             {/* Lista */}
-            <ListComponent
+            <FlatListComponent
                 data={Consultas}
                 keyExtractor={(item) => item.id}
 
-                renderItem={({item}) => 
-            statusLista == item.situacao && (
-                <AppointmentCard
-                    situacao={item.situacao}
-                    onPressCancel={() => setShowModalCancel(true)}
-                    onPressVerProntuario={() => setShowModalConsult(true)}
-                    onPressAppointment={() => setShowModalAppointment(true)}
-                />
-            )}
+                renderItem={({ item }) =>
+                    statusLista == item.situacao && (
+                        <AppointmentCard
+                            situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressVerProntuario={() => setShowModalConsult(true)}
+                            onPressAppointment={() => setShowModalAppointment(true)}
+                        />
+                    )}
                 showsVerticalScrollIndicator={false}
             />
-            
-        
+
+
 
             {/* modal cancelar */}
             <CancellationModal
@@ -97,7 +94,7 @@ export const ConsultasMedico = () => {
             <ConsultModal
                 visible={showModalConsult}
                 setShowModalConsult={setShowModalConsult}
-            />       
+            />
         </Container>
     )
 }
