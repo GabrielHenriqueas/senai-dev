@@ -1,12 +1,10 @@
 import { DefaultButton, GoogleButton } from "../../components/Button/Button"
-import { Button, ButtonGoogle, ButtonTitle, ButtonTitleGoogle } from "../../components/Button/StyledButton"
 import { Container } from "../../components/Container/StyledContainer"
-import { ContentAccount, LinkBold, TextAccount } from "../../components/ContentAccount/StyledContentAccount"
 import { Input } from "../../components/Input/StyledInput"
+import { Link } from "../../components/Link/Link"
 import { LinkMedium } from "../../components/Link/StyledLink"
 import { Logo } from "../../components/Logo/StyledLogo"
 import { Title } from "../../components/Title/StyledTitle"
-import { AntDesign } from '@expo/vector-icons';
 
 export const Login = ({ Login }) => {
     return (
@@ -16,13 +14,9 @@ export const Login = ({ Login }) => {
 
             <Title>Entrar ou criar conta</Title>
 
-            <Input
-                placeholder="Usuário ou E-mail"
-            />
+            <Input placeholder="Usuário ou E-mail" />
 
-            <Input
-                placeholder="Senha"
-            />
+            <Input placeholder="Senha" />
 
             <LinkMedium>Esqueceu sua senha?</LinkMedium>
 
@@ -30,10 +24,7 @@ export const Login = ({ Login }) => {
 
             <GoogleButton text={"Entrar com o Google"} />
 
-
-            <ContentAccount>
-                <TextAccount>Não tem conta?</TextAccount><LinkBold> Crie uma agora!</LinkBold>
-            </ContentAccount>
+            <Link text={"Não tem conta?"} link={" Crie uma agora!"} />
 
         </Container>
     )
