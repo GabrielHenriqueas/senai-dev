@@ -11,15 +11,18 @@ import { Perfil } from "./src/screens/Perfil/Perfil";
 import { ConsultasMedico } from "./src/screens/ConsultasMedico/ConsultasMedico";
 import { Prontuario } from "./src/screens/Prontuario/Prontuario";
 import { ProntuarioEdit } from "./src/screens/ProntuarioEdit/ProntuarioEdit";
+import { SelecionarClinica } from "./src/screens/SelecionarClinica/SelecionarClinica";
+import { ConsultasPaciente } from "./src/screens/ConsultasPaciente/ConsultasPaciente";
+import { Main } from "./src/screens/Main/Main";
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
 
-  const [fontsLoaded, fontsError] = useFonts({ 
-    MontserratAlternates_600SemiBold, 
-    MontserratAlternates_500Medium, 
-    Quicksand_500Medium, 
+  const [fontsLoaded, fontsError] = useFonts({
+    MontserratAlternates_600SemiBold,
+    MontserratAlternates_500Medium,
+    Quicksand_500Medium,
     Quicksand_600SemiBold,
     Quicksand_400Regular,
   })
@@ -39,18 +42,24 @@ export default function App() {
     <NavigationContainer>
 
       <Stack.Navigator screenOptions={{
-        headerShown:false
+        headerShown: false
       }}>
-        <Stack.Screen
-          name="Navegacao"
-          component={Navegacao}
-          options={{ title: "Navegação" }}
-        />
         <Stack.Screen
           name="Login"
           component={Login}
           options={{ title: "Login" }}
         />
+        <Stack.Screen
+          name="Main"
+          component={Main}
+        />
+
+        {/* <Stack.Screen
+          name="Navegacao"
+          component={Navegacao}
+          options={{ title: "Navegação" }}
+        /> */}
+
         <Stack.Screen
           name="RecuperarSenha"
           component={RecuperarSenha}
@@ -69,7 +78,7 @@ export default function App() {
         <Stack.Screen
           name="CriarConta"
           component={CriarConta}
-          options={{ title: "Criar Conta" }}
+          options={{ title: "CriarConta" }}
         />
         <Stack.Screen
           name="Perfil"
@@ -90,6 +99,16 @@ export default function App() {
           name="ProntuarioEdit"
           component={ProntuarioEdit}
           options={{ title: "ProntuarioEdit" }}
+        />
+        <Stack.Screen
+          name="SelecionarClinica"
+          component={SelecionarClinica}
+          options={{ title: "SelecionarClinica" }}
+        />
+        <Stack.Screen
+          name="ConsultasPaciente"
+          component={ConsultasPaciente}
+          options={{ title: "ConsultasPaciente" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

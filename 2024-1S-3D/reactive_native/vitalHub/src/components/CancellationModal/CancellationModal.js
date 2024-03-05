@@ -7,7 +7,8 @@ import { ContentAccount, LinkBold } from "../ContentAccount/StyledContentAccount
 export const CancellationModal = ({
     visible,
     setShowModalCancel,
-    ...rest }) => {
+    ...rest
+}) => {
     return (
         // 
         <Modal {...rest} visible={visible} transparent={true} animationType="fade">
