@@ -1,29 +1,45 @@
-import { FlatListComponent } from "react-native";
-import CalendarList from "../../components/Calendar/CalendarHome"
-import { Container, FilterAppointment } from "../../components/Container/StyledContainer"
-import { Header } from "../../components/Header/Header"
-import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
+import { useState } from "react";
+import { Container, FilterAppointment, FlatContainer } from "../../components/Container/StyledContainer";
+import { Header } from "../../components/Header/Header";
+import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment"
+import Calendar from "../../components/Calendar/Calendar";
+import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
+import { CancellationModal } from "../../components/CancellationModal/CancellationModal";
+import { ConsultModal } from "../../components/ConsultModal/ConsultModal";
 
-const Consultas = [
-    { id: 1, nome: "Carlos", situacao: "pendente" },
-    { id: 2, nome: "Carlos", situacao: "pendente" },
-    { id: 3, nome: "Carlos", situacao: "cancelado" },
-    { id: 4, nome: "Carlos", situacao: "realizado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-];
+export const ConsultasPaciente = () => {
 
-export const ConsultasPaciente = ({ }) => {
+    //state para o estado da lista(Cards)
+    const [statusLista, setStatusLista] = useState("pendente")
+
+    // state para a exibição dos modais
+    const [showModalCancel, setShowModalCancel] = useState(false);
+    const [showModalConsult, setShowModalConsult] = useState(false);
+    const [showModalAppointment, setShowModalAppointment] = useState(false);
+
+    const Consultas = [
+        { id: 1, nome: "Carlos", situacao: "pendente" },
+        { id: 2, nome: "Carlos", situacao: "pendente" },
+        { id: 3, nome: "Carlos", situacao: "cancelado" },
+        { id: 4, nome: "Carlos", situacao: "realizado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+    ]
     return (
         <Container>
+
+            {/* Header */}
             <Header />
 
-            <CalendarList />
+            {/* Calendário */}
+            <Calendar />
+
+            {/* Filtros (botões) */}
+            {/* Container */}
 
             <FilterAppointment>
-
                 {/* botao p consultas agendadas */}
                 <BtnListAppointment
                     textButton={"Agendadas"}
@@ -41,15 +57,30 @@ export const ConsultasPaciente = ({ }) => {
                     textButton={"Canceladas"}
                     clickButton={statusLista === "cancelado"}
                     onPress={() => setStatusLista("cancelado")} />
-
             </FilterAppointment>
 
-            {/* <FlatListComponent
+            {/* Seção de Cards */}
+            {/* Card */}
 
-            /> */}
+            {/* Lista */}
+            <FlatContainer
+                data={Consultas}
+                keyExtractor={(item) => item.id}
+
+                renderItem={({ item }) =>
+                    statusLista == item.situacao && (
+                        <AppointmentCard
+                            situacao={item.situacao}
+                            onPressCancel={() => setShowModalCancel(true)}
+                            onPressVerProntuario={() => setShowModalConsult(true)}
+                            onPressAppointment={() => setShowModalAppointment(true)}
+                        />
+                    )}
+                showsVerticalScrollIndicator={false}
+            />
 
             {/* modal cancelar */}
-            {/* <CancellationModal
+            <CancellationModal
                 visible={showModalCancel}
                 setShowModalCancel={setShowModalCancel}
             />
@@ -57,8 +88,7 @@ export const ConsultasPaciente = ({ }) => {
             <ConsultModal
                 visible={showModalConsult}
                 setShowModalConsult={setShowModalConsult}
-            /> */}
-
+            />
         </Container>
     )
 }

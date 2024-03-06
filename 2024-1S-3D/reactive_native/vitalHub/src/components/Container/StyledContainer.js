@@ -83,3 +83,6 @@ export const FilterAppointment = styled.View`
         flex-direction: row;
         justify-content: space-between;
 `
+export const FlatContainer = styled.FlatList`
+  width: 100%;
+`

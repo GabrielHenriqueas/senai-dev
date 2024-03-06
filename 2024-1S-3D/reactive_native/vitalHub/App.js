@@ -45,6 +45,11 @@ export default function App() {
         headerShown: false
       }}>
         <Stack.Screen
+          name="Navegacao"
+          component={Navegacao}
+          options={{ title: "Navegação" }}
+        />
+        <Stack.Screen
           name="Login"
           component={Login}
           options={{ title: "Login" }}
@@ -54,11 +59,6 @@ export default function App() {
           component={Main}
         />
 
-        {/* <Stack.Screen
-          name="Navegacao"
-          component={Navegacao}
-          options={{ title: "Navegação" }}
-        /> */}
 
         <Stack.Screen
           name="RecuperarSenha"

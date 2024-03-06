@@ -1,24 +1,11 @@
 import { useState } from "react";
-import { CalendarList } from "../../components/Calendar/CalendarHome"
-import { Container, FilterAppointment } from "../../components/Container/StyledContainer";
+import { Container, FilterAppointment, FlatContainer } from "../../components/Container/StyledContainer";
 import { Header } from "../../components/Header/Header";
-import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";
+import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment"
+import Calendar from "../../components/Calendar/Calendar";
 import { AppointmentCard } from "../../components/AppointmentCard/AppointmentCard";
 import { CancellationModal } from "../../components/CancellationModal/CancellationModal";
 import { ConsultModal } from "../../components/ConsultModal/ConsultModal";
-import { FlatListComponent } from "react-native";
-
-
-const Consultas = [
-    { id: 1, nome: "Carlos", situacao: "pendente" },
-    { id: 2, nome: "Carlos", situacao: "pendente" },
-    { id: 3, nome: "Carlos", situacao: "cancelado" },
-    { id: 4, nome: "Carlos", situacao: "realizado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-    { id: 5, nome: "Carlos", situacao: "cancelado" },
-];
 
 export const ConsultasMedico = () => {
 
@@ -30,6 +17,16 @@ export const ConsultasMedico = () => {
     const [showModalConsult, setShowModalConsult] = useState(false);
     const [showModalAppointment, setShowModalAppointment] = useState(false);
 
+    const Consultas = [
+        { id: 1, nome: "Carlos", situacao: "pendente" },
+        { id: 2, nome: "Carlos", situacao: "pendente" },
+        { id: 3, nome: "Carlos", situacao: "cancelado" },
+        { id: 4, nome: "Carlos", situacao: "realizado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+        { id: 5, nome: "Carlos", situacao: "cancelado" },
+    ]
     return (
         <Container>
 
@@ -37,7 +34,7 @@ export const ConsultasMedico = () => {
             <Header />
 
             {/* Calendário */}
-            <CalendarList />
+            <Calendar />
 
             {/* Filtros (botões) */}
             {/* Container */}
@@ -63,11 +60,10 @@ export const ConsultasMedico = () => {
             </FilterAppointment>
 
             {/* Seção de Cards */}
-
             {/* Card */}
 
             {/* Lista */}
-            <FlatListComponent
+            <FlatContainer
                 data={Consultas}
                 keyExtractor={(item) => item.id}
 
