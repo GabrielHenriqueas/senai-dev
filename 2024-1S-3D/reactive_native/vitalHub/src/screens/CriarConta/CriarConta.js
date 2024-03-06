@@ -6,7 +6,7 @@ import { LinkMedium } from "../../components/Link/StyledLink"
 import { Logo } from "../../components/Logo/StyledLogo"
 import { SubTitle, Title } from "../../components/Title/StyledTitle"
 
-export const CriarConta = ({ CriarConta }) => {
+export const CriarConta = ({ navigation }) => {
     return (
         <Container>
             <Logo source={require('../../assets/VitalHubLogo.png')} />
@@ -15,17 +15,17 @@ export const CriarConta = ({ CriarConta }) => {
 
             <SubTitle>Insira seu endereço de e-mail e senha para realizar seu cadastro.</SubTitle>
 
-            <Input 
+            <Input
                 placeholder={"Usuário ou E-mail"}
             />
-            <Input 
+            <Input
                 placeholder={"Senha"}
             />
-            <Input 
+            <Input
                 placeholder={"Confirmar Senha"}
             />
 
-            <Button>
+            <Button onPress={() => navigation.replace("Login")}>
                 <ButtonTitle>CADASTRAR</ButtonTitle>
             </Button>
 

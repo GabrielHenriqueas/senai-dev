@@ -4,7 +4,7 @@ import { Input } from "../../components/Input/StyledInput"
 import { Logo } from "../../components/Logo/StyledLogo"
 import { SubTitle, Title } from "../../components/Title/StyledTitle"
 
-export const RedefinirSenha = ({ RedefinirSenha }) => {
+export const RedefinirSenha = ({ navigation }) => {
     return (
         <Container>
 
@@ -22,7 +22,7 @@ export const RedefinirSenha = ({ RedefinirSenha }) => {
                 placeholder={"Confirmar nova senha"} 
             />
 
-            <Button>
+            <Button onPress={() => navigation.replace("Login")}>
                 <ButtonTitle>CONFIRMAR NOVA SENHA</ButtonTitle>
             </Button>
 

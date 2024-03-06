@@ -6,6 +6,7 @@ import { RedefinirSenha } from '../RedefinirSenha/RedefinirSenha';
 import { ContentIcon, TextIcon } from './StyledMain';
 
 import { FontAwesome, FontAwesome5 } from '@expo/vector-icons'
+import { ConsultasMedico } from '../ConsultasMedico/ConsultasMedico';
 
 const BottomTab = createBottomTabNavigator();
 
@@ -34,12 +35,14 @@ export const Main = () => {
                         )
 
                     } else {
-                        <ContentIcon
-                            tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
-                        >
-                            <FontAwesome5 name='user-cicle' size={18} color={"#4E4B59"} />
-                            {focused && <TextIcon>Perfil</TextIcon>}
-                        </ContentIcon>
+                        return (
+                            <ContentIcon
+                                tabBarActiveBackgroundColor={focused ? "#ECF2FF" : "transparent"}
+                            >
+                                <FontAwesome5 name='user-circle' size={18} color={"#4E4B59"} />
+                                {focused && <TextIcon>Perfil</TextIcon>}
+                            </ContentIcon>
+                        )
                     }
                 }
             })}
@@ -52,7 +55,7 @@ export const Main = () => {
 
             <BottomTab.Screen
                 name='Perfil'
-                component={Perfil}
+                component={ConsultasMedico}
             />
 
         </BottomTab.Navigator>

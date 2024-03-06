@@ -7,7 +7,7 @@ import { InputVerifica } from "../../components/Input/StyledInput";
 import { DefaultButton } from "../../components/Button/Button";
 import { Link } from "../../components/Link/Link";
 
-export const VerificaEmail = ({ VerificaEmail }) => {
+export const VerificaEmail = ({ navigation }) => {
     return (
         <Container>
             <Logo source={require('../../assets/VitalHubLogo.png')} />
@@ -42,7 +42,7 @@ export const VerificaEmail = ({ VerificaEmail }) => {
                 />
             </ContentNumber>
 
-            <DefaultButton text={"Entrar"} />
+            <DefaultButton text={"Entrar"} onPress={() => navigation.replace("RedefinirSenha")} />
 
             <Link link={"Reenviar Código"} />
         </Container>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { CalendarList } from "../../components/Calendar/CalendarHome";
+import { CalendarList } from "../../components/Calendar/CalendarHome"
 import { Container, FilterAppointment } from "../../components/Container/StyledContainer";
 import { Header } from "../../components/Header/Header";
 import { BtnListAppointment } from "../../components/BtnListAppointment/BtnListAppointment";

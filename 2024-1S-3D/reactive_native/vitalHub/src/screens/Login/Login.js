@@ -24,7 +24,7 @@ export const Login = ({ navigation }) => {
 
             <Input placeholder="Senha" />
 
-            <LinkMedium>Esqueceu sua senha?</LinkMedium>
+            <LinkMedium onPress={() => navigation.replace("RecuperarSenha")}>Esqueceu sua senha?</LinkMedium>
 
             <DefaultButton text={"Entrar"} onPress={(e) => Login()} />
 
@@ -33,7 +33,7 @@ export const Login = ({ navigation }) => {
             {/* <Link text={"Não tem conta?"} link={" Crie uma agora!"} /> */}
 
             <ContentAccount>
-                <TextAccount>afdssad</TextAccount><LinkBold onPress={() => navigation.replace("RedefinirSenha")}>sahdb</LinkBold>
+                <TextAccount>Não tem conta?</TextAccount><LinkBold onPress={() => navigation.replace("CriarConta")}> Crie uma agora!</LinkBold>
             </ContentAccount>
 
         </Container>
