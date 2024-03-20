@@ -1,0 +1,21 @@
+npm install -g json-server
+
+npx json-server --watch db.json
+
+criar um arquivo chamado "db.json" na raiz da aplicação
+
+----------------------------------------------------------
+
+{
+    "cep" : [
+        {
+            "id" : "00000-000",
+            "logradouro" : "logradouro",
+            "bairro" : "bairro",
+            "localidade" : "localidade",
+            "estado" : "estado",
+            "uf" : "SP"
+        }
+    ]
+
+}
